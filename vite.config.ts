@@ -2,12 +2,13 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  base: '/', // 🌟 Bu satır eklendi
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
   server: {
-    host: true, // Listen on all local IPs
+    host: true,
     port: 5173,
   },
 });
